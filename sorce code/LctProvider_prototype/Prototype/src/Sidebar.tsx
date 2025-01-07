@@ -9,14 +9,15 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 
 
+
 export default function Sidebar(){
       
     const menus = [
-        {name:"dashboard", link:'dashboard',  icon: TbLayoutDashboardFilled },
-        {name:"Billing", link:'billing',  icon: BsCashCoin },
-        {name:"PreAuth", link:'pre-Auth',  icon: GiPadlockOpen },
-        {name:"Reports", link:'reports',  icon: TbReportSearch },
-        {name:"Contacts", link:'contacts',  icon: RiContactsLine },
+        {name:"dashboard", link:'/dashboard',  icon: TbLayoutDashboardFilled },
+        {name:"Billing", link:'/billing',  icon: BsCashCoin },
+        {name:"PreAuth", link:'/pre-Auth',  icon: GiPadlockOpen },
+        {name:"Reports", link:'/reports',  icon: TbReportSearch },
+        {name:"Contacts", link:'/contacts',  icon: RiContactsLine },
 
     ];
 

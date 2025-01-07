@@ -11,10 +11,16 @@ const Login = ()=>{
 
 const handleSubmit = (e: React.FormEvent) => {
    e.preventDefault(); // Handle login logic here
+
+   if (!username.trim() || !password.trim()) {
+    alert("Please fill out both username and password fields.");
+    return; // Stop further execution if fields are empty
+  }
+
    console.log('Username:', username);
    console.log('Password:', password);
    
-   navigate('/home')
+   navigate("/home", { state:{ username : "User Name"}})
   };
    
  
@@ -33,7 +39,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <label className="absolute text-sn text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-18 origin-[0] peer-focus:left-0  peer-focus:text-blue-688 peer-focus:dark:text-blue-500 peer-placeholder-shown:100 peer-placeholder-shown:translate-y-8 peer-focus:scale-75 peer- focus:scale-75 peer-focus:translate-y-6" >Password</label>
              <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} className="block w-72 py-2.3 px-0 text-sn text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-white focus:border-blue-600 peer" required />
           </div>
-          <button  onClick={(e)=> handleSubmit(e)} className="w-full mb-0 text-[15px] mt-6 rounded-full bg-gray-300 text-black hover:bg-green-600 hover:text-white py-1 transition-colors duration-300"> Sign In </button>
+          <button  onClick={(e)=> handleSubmit(e)} className="w-full mb-0 text-[15px] mt-6 rounded-full bg-gray-300 text-black hover:bg-green-600 hover:text-white py-1 transition-colors duration-300" > Sign In </button>
     
           </form>
           </div>
