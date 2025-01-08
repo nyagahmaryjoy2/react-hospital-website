@@ -59,16 +59,17 @@ const Search = () => {
     
     const handleSearch = (value) => {
       setSearch(value);
-       if (!value.trim()) {
-      setSelectedMembers(members); // Show all members if input is empty
-      return;
-       }
+      if (!value.trim()) {
+        setSelectedMember(members); // Show all members if input is empty
+        return;
+      }
       const member = members.filter(
-        (m) => m.name.toLowerCase() === search.toLowerCase()||
-         m.memberId.toString() === search ||
-       m.email.toLowerCase() === search.toLowerCase() ||
-         m.phoneNumber.toString() === search ||
-         m.scheme.toLowerCase() === search.toLowerCase()
+        (m) =>
+          m.name.toLowerCase().includes(value.toLowerCase()) ||
+          m.memberId.toString().includes(value) ||
+          m.email.toLowerCase().includes(value.toLowerCase()) ||
+          m.phoneNumber.toString().includes(value) ||
+          m.scheme.toLowerCase().includes(value.toLowerCase())
       );
       setSelectedMember(member); // If no match, set null
     };
