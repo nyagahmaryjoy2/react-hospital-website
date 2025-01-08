@@ -1,52 +1,22 @@
-import Home from "./Home";
-import 'app.css';
-import { AiFillContacts } from "react-icons/ai";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
+const Contacts = () => {
+  return (
+    <>
+      <section className="flex  ">
+        <Sidebar />
+        <div className="container ">
+          <Header />
 
-
-const Contacts = ()=>{
-    
-
-    return(
-        <>
-            <section className='flex gap-6'>
-                <Home userName={''} />
-                <div className='container'>
-                    <div>
-                        <AiFillContacts />
-
-
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+          {/* Content */}
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Contacts;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import Sidebar from "./Sidebar";
 // import { useNavigate } from "react-router-dom";
@@ -55,9 +25,7 @@ export default Contacts;
 //      const navigate = useNavigate();
 
 //      const handleClick =() => {navigate('contacts')};
-        
-     
-    
+
 //     return(
 //         <div>
 //             <Sidebar/>
