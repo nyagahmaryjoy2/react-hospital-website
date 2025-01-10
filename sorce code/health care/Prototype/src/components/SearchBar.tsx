@@ -42,7 +42,7 @@ const members = [
     scheme: "Cat A",
   },
   {
-    id: 1,
+    id: 5,
     memberId: "123456-00",
     name: "John willy",
     age: 31,
@@ -52,12 +52,12 @@ const members = [
   },
 ];
 
-const Search = () => {
+const SearchBar = () => {
     const [search, setSearch] = useState("");
     const [selectedMember, setSelectedMember] = useState(members);
     
     
-    const handleSearch = (value) => {
+    const handleSearch = (value: string) => {
       setSearch(value);
       if (!value.trim()) {
         setSelectedMember(members); // Show all members if input is empty
@@ -77,7 +77,7 @@ const Search = () => {
   return (
     <>
       <div
-        className={`flex items-center  border border-cyan-700  p-2 rounded-md 
+        className={`flex items-center  border border-cyan-700  p-2 rounded-md w-11/12
             `}
       >
         <BiSearch size={20} className="text-gray-400 ml-1" />
@@ -92,7 +92,7 @@ const Search = () => {
       {/* Display Member Details */}
       {selectedMember.length > 0
         ? selectedMember.map((member) => (
-            <div className="container">
+            <div key={member.id} className="container">
               <div className="flex flex-col items-center justify-center p-4">
                 <div className="   mt-5 p-4 bg-gray-100 rounded-md shadow-md w-80">
                   <h2 className="text-lg font-bold">Member Details</h2>
@@ -126,4 +126,4 @@ const Search = () => {
   );
 }
 
-export default Search;
+export default SearchBar;

@@ -5,11 +5,14 @@ const Dashboard = () => {
   return (
     <>
       <section className="flex  ">
-        <Sidebar />
+        <div className="fixed">
+          <Sidebar />
+        </div>
+
         <div className="container ">
           <Header />
 
-          {/* Content */}
+          {/* Content  in div h-screen flex justify-center items-center*/}
         </div>
       </section>
     </>

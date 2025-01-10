@@ -1,10 +1,14 @@
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import Search from "./Search";
-import { Link } from "react-router-dom";
+
+import BillingFilters from "./BillingContent/BillingFilters";
+
+
+
 
 const Billing = () => {
+  // const [tab]
   
   return (
     <>
@@ -14,20 +18,13 @@ const Billing = () => {
           <Header />
 
           {/* Content */}
-          <div className="container">
-            <div className="row justify-between ">
+          
+            <div>
+              {/* <div className="row  flex justify-center   "></div> */}
 
-              
-              <ul>
-                <Link to="">a</Link>
-                <Link to="">b</Link>
-                <Link to="">c</Link>
-                <Link to="">d</Link>
-                
-              </ul>
+                <BillingFilters/>
             </div>
-          </div>
-          <Search />
+
         </div>
       </section>
     </>

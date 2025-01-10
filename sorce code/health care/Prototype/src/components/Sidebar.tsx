@@ -19,11 +19,12 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="flex">
+    
+    <div className="flex ">
       {/* Sidebar */}
       <div
         className={`min-h-screen ${
-          open ? "w-72" : "w-16"
+          open ? "w-60" : "w-16"
         } duration-500 text-gray-50 px-4`}
         style={{ backgroundImage: "url('../src/assets/bg.jpg')" }}
       >

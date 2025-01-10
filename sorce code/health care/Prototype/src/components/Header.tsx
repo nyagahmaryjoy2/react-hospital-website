@@ -17,8 +17,8 @@ export default function Header() {
   };
 
   return (
-    <div className="flex items-center justify-between p-4">
-      <h1 className="m-3 text-x1 text-gray-500 font font-semibold">
+    <div className="flex items-center justify-between p-4 bg-gray-100">
+      <h1 className="m-3 text-x1 text-gray-500 bg-gray-100font font-semibold">
         HEALTH CARE CENTER{" "}
       </h1>
       <div
@@ -26,11 +26,11 @@ export default function Header() {
                         "
       >
         <span className="  text-lg font-medium  inset-0 flex justify-center items-center">
-          {userName} || <MdOutlineLogout className="text-blue-800"/>
+          {userName} || <MdOutlineLogout className="text-blue-800" />
         </span>
         <button
           onClick={handleOnLogOut}
-          className=" font-semibold rounded bg-white"
+          className=" font-semibold rounded bg-gray-100"
         >
           Logout{" "}
         </button>
