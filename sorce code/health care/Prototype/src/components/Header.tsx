@@ -9,7 +9,7 @@ interface Header {
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { userName } = location.state?.username || { userName: "Guest" };
+  const { state } = location || { userName: "Guest" };
   // const { userName } = location.state || { userName: "Guest" }
 
   const handleOnLogOut = () => {
@@ -26,7 +26,7 @@ export default function Header() {
                         "
       >
         <span className="  text-lg font-medium  inset-0 flex justify-center items-center">
-          {userName} || <MdOutlineLogout className="text-blue-800" />
+          {state?.username} || <MdOutlineLogout className="text-blue-800" />
         </span>
         <button
           onClick={handleOnLogOut}

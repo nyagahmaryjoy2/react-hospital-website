@@ -1,21 +1,26 @@
 import { BiSearch } from "react-icons/bi";
 import { useState } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+// import MemberDetails from "./MemberDetails";
 
 
 
 const members = [
   {
     id: 1,
+    visitNumber: 1,
+    payerName: "Danny",
     memberId: "123456789-00",
-    name: "John Doe",
+    name: "Ann marie",
     age: 30,
-    email: "john@gmail.com",
+    email: "annmarie@gmail.com",
     phoneNumber: "0727156401",
     scheme: "Cat A",
   },
   {
     id: 2,
+    visitNumber: 2,
+    payerName: "Danny",
     memberId: "123456789-01",
     name: "Jane Smith",
     age: 29,
@@ -25,6 +30,7 @@ const members = [
   },
   {
     id: 3,
+    visitNumber: 3,
     memberId: "123456798-00",
     name: "Alice Johnson",
     age: 24,
@@ -34,6 +40,8 @@ const members = [
   },
   {
     id: 4,
+    visitNumber: 4,
+    payerName: "Danny",
     memberId: "123456798-01",
     name: "Bob Brown",
     age: 41,
@@ -43,6 +51,8 @@ const members = [
   },
   {
     id: 5,
+    visitNumber: 5,
+    payerName: "Danny",
     memberId: "123456-00",
     name: "John willy",
     age: 31,
@@ -72,6 +82,9 @@ const SearchBar = () => {
           m.scheme.toLowerCase().includes(value.toLowerCase())
       );
       setSelectedMember(member); // If no match, set null
+    };
+    const handleOnClick = () =>{
+      setSelectedMember(members);
     };
 
   return (
@@ -111,7 +124,11 @@ const SearchBar = () => {
                     {member.scheme}
                   </p>
 
-                  <button className="bg-blue-500 text-white px-4 py-1 rounded-md ml-2 flex items-center justify-between p-4">
+                  <button
+                  onClick={handleOnClick}
+                    className=" text-white px-4 py-1 rounded-md ml-2 flex items-center justify-between p-4"
+                    style={{ backgroundImage: "url('../src/assets/bg.jpg')" }} 
+                  >
                     <FaRegArrowAltCircleRight />
                     View details
                   </button>

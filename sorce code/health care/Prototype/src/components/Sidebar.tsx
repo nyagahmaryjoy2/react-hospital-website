@@ -19,12 +19,11 @@ export default function Sidebar() {
   ];
 
   return (
-    
     <div className="flex ">
       {/* Sidebar */}
       <div
-        className={`min-h-screen ${
-          open ? "w-60" : "w-16"
+        className={`min-h-screen    ${
+          open ? "w-60  " : "w-16  "
         } duration-500 text-gray-50 px-4`}
         style={{ backgroundImage: "url('../src/assets/bg.jpg')" }}
       >
@@ -60,7 +59,6 @@ export default function Sidebar() {
                 {" "}
                 {menu?.name}
               </span>
-              
             </Link>
           ))}
         </div>
@@ -76,5 +74,6 @@ absolute: Positions the tooltip relative to the parent.
 opacity-0 and opacity-100: Controls visibility.
 transition-all and duration-300: Adds smooth transitions.
 hover:bg-gray-50 and hover:text-black: Adds hover styles for the menu links.
+sm:w-16 md:w-60
  */
 }

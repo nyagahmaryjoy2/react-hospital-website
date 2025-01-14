@@ -1,15 +1,11 @@
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-
-import BillingFilters from "./BillingContent/BillingFilters";
-
-
-
+import BillingFilters from "./BillingFilters";
 
 const Billing = () => {
   // const [tab]
-  
+
   return (
     <>
       <section className="flex  ">
@@ -18,13 +14,12 @@ const Billing = () => {
           <Header />
 
           {/* Content */}
-          
-            <div>
-              {/* <div className="row  flex justify-center   "></div> */}
 
-                <BillingFilters/>
-            </div>
+          <div>
+            {/* <div className="row  flex justify-center   "></div> */}
 
+            <BillingFilters />
+          </div>
         </div>
       </section>
     </>

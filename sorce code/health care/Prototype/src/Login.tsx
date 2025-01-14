@@ -18,9 +18,10 @@ const Login = () => {
     console.log("Username:", username);
     console.log("Password:", password);
 
-    navigate("/home", { state: { username } });
+    navigate("/dashboard", { state: { username } });
   };
 
+  
   return (
     <div
       className="text-white h-[100vh] flex justify-center items-center bg-cover"
